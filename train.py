@@ -69,7 +69,7 @@ def train(df_train, y_train, C=1.0):
     dv = DictVectorizer(sparse=False)
     X_train = dv.fit_transform(dicts)
 
-    model = LogisticRegression(C=C, max_iter=1000)
+    model = LogisticRegression(C=C, max_iter=10000)
     model.fit(X_train, y_train)
     
     return dv, model
